@@ -47,9 +47,7 @@ class CategoryController extends Controller
     {
         $category = Category::where('id', $id)->first();
 
-        $title = $request->title;
-
-        $category->title = $title;
+        $category->title = $request->title;;
 
         $category->save();
 
